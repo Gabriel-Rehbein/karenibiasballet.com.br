@@ -1,0 +1,102 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text,
+.cta-button,
+.modalidade,
+.professor,
+.ano {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* animation.css */
+
+/* Fade-in suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-down (hero) */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Escala suave para hover */
+@keyframes pulseUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Aplicações gerais */
+.hero-text {
+  animation: fadeDown 1.2s ease-in-out both;
+}
+
+
+
+/* Botão CTA */
+.cta-button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  animation: pulseUp 0.3s ease-in-out forwards;
+}
+
+/* Imagens da galeria */
+.royal-fotos img,
+.historia img {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar mouse */
+.royal-fotos img:hover,
+.historia img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade nos depoimentos */
+.depoimentos blockquote {
+  animation: fadeIn 1.2s ease-in-out both;
+}

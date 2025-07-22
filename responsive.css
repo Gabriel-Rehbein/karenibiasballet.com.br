@@ -1,0 +1,128 @@
+/* responsive.css */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2.4rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .modalidades {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .linha-do-tempo {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .navbar ul {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .destaques {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .royal h2,
+  .espetaculos h2,
+  .enderecos h2,
+  .contato h2 {
+    font-size: 2rem;
+  }
+
+  .royal-info,
+  .unidade {
+    padding: 1.5rem;
+  }
+
+  .professor,
+  .unidade {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .contato-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contato-icon {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .mapa iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .modalidade img,
+  .professor img {
+    height: 180px;
+  }
+
+  .royal-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .banner-rotativo {
+    height: 250px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
