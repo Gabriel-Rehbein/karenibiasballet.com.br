@@ -300,3 +300,47 @@
         float: none !important; /* Anula qualquer float */
     }
 }
+
+/* Menu hambúrguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--dourado);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 2001;
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header.navbar ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    padding-top: 5rem;
+  }
+
+  header.navbar ul.ativo {
+    display: flex;
+  }
+}

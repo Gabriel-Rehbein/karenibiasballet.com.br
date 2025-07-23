@@ -14,20 +14,24 @@
 </head>
 
 <header class="navbar">
-  <div class="logo-container">
-    <img src="img/logoaba.jpg" alt="Logo Karen Ibias Ballet" class="logo-img">
+  <a href="index.html" class="logo-container">
+    <img src="img/logoaba.jpg" alt="Logo Karen Ibias Ballet" class="logo-img" />
     <h1 class="logo-text">Karen Ibias Ballet</h1>
-  </div>
-  <ul>
+  </a>
+
+  <!-- Botão do menu hambúrguer -->
+  <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
+  <ul id="menuLista">
     <li><a href="paginas.html/modalidades.html">Modalidades</a></li>
-    <li><a href="../paginas.html/horarios.html">Horários</a></li>
+    <li><a href="paginas.html/horarios.html">Horários</a></li>
+    <li><a href="paginas.html/agenda.html">Agenda 2025</a></li>
     <li><a href="paginas.html/royal.html">Royal Academy</a></li>
     <li><a href="paginas.html/espetaculos.html">Espetáculos</a></li>
     <li><a href="paginas.html/enderecos.html">Endereços</a></li>
     <li><a href="paginas.html/sobre.html">Sobre</a></li>
     <li><a href="paginas.html/contato.html">Contato</a></li>
   </ul>
-  </nav>
 </header>
 
 <section class="hero">
@@ -36,9 +40,9 @@
     <a href="paginas.html/contato.html" class="cta-button">Matricule-se</a>
   </div>
 </section>
- 
 
-  </div>
+
+</div>
 </section>
 
 <section class="destaques">
@@ -52,24 +56,11 @@
     <a href="paginas.html/espetaculos.html">Espetáculos</a>
   </div>
 </section>
-
+<script src="index.js"></script>
 
 <footer>
   <p>&copy; 2025 Karen Ibias Ballet. Todos os direitos reservados.</p>
 </footer>
 </body>
-<script>
-  let index = 0;
-  const banners = document.querySelectorAll('.banner-img');
-
-  setInterval(() => {
-    banners.forEach((img, i) => {
-      img.classList.remove('active');
-      if (i === index) img.classList.add('active');
-    });
-
-    index = (index + 1) % banners.length;
-  }, 4000);
-</script>
 
 </html>
