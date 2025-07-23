@@ -115,3 +115,36 @@
 .linha-horario {
   animation: aparecerSuave 0.4s ease-in-out both;
 }
+/* animation.css - animações para Agenda 2025 */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+.modal.ativo .modal-box {
+  animation: fadeIn 0.3s ease;
+}
+
+.hoje {
+  animation: pulse 1.5s infinite;
+}
+
