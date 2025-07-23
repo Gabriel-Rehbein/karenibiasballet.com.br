@@ -15,6 +15,12 @@
   transition: transform 0.3s ease;
 }
 
+.modalidade {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .modalidade:hover {
   transform: translateY(-8px);
 }
@@ -46,4 +52,17 @@
   font-size: 1rem;
   margin-top: 0.5rem;
   font-style: italic;
+}
+
+.saiba-mais {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--dourado, #d4af37);
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.modalidade:hover .saiba-mais {
+  transform: translateX(4px);
 }
