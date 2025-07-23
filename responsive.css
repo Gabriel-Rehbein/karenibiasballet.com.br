@@ -1,49 +1,7 @@
-/* responsive.css */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .hero-text h2 {
-    font-size: 2.4rem;
-  }
-
-  .cta-button {
-    font-size: 1.1rem;
-    padding: 0.8rem 2rem;
-  }
-
-  .modalidades {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-
-  .linha-do-tempo {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-}
-
-/* Celulares */
+/* --- Celulares --- */
 @media (max-width: 768px) {
-  .navbar ul {
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .hero {
-    height: auto;
-    padding: 3rem 1rem;
-  }
-
-  .hero-text h2 {
-    font-size: 2rem;
-  }
-
-  .destaques {
+  .navbar {
+    padding: 1rem;
     flex-direction: column;
     align-items: center;
   }
@@ -54,20 +12,46 @@
     text-align: center;
   }
 
+  .navbar .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+    height: auto;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .destaques {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .royal h2,
   .espetaculos h2,
   .enderecos h2,
-  .contato h2 {
+  .contato h2,
+  .grade-horarios h2 {
     font-size: 2rem;
   }
 
   .royal-info,
-  .unidade {
+  .unidade,
+  .professor {
     padding: 1.5rem;
-  }
-
-  .professor,
-  .unidade {
     width: 100%;
     max-width: 90%;
   }
@@ -87,25 +71,50 @@
     width: 100%;
     height: 300px;
   }
-}
 
-/* Celulares pequenos */
-@media (max-width: 480px) {
-  .navbar {
+  .grade-horarios {
     padding: 1rem;
   }
 
-  .logo {
-    font-size: 1.5rem;
+  .linha-horario {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .linha-horario img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .linha-horario .nome {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .linha-horario .local,
+  .linha-horario .hora {
+    width: 100%;
+    text-align: center !important;
+    font-size: 0.95em;
+    margin: 5px 0;
+    float: none !important;
+  }
+}
+
+/* --- Celulares pequenos --- */
+@media (max-width: 480px) {
+  .navbar .logo-text {
+    font-size: 1.1rem;
   }
 
   .hero-text h2 {
     font-size: 1.6rem;
-  }
-
-  .cta-button {
-    font-size: 1rem;
-    padding: 0.7rem 1.5rem;
   }
 
   .modalidade img,
@@ -125,222 +134,45 @@
     font-size: 0.8rem;
     padding: 1rem;
   }
-}
-
-/* Estilo responsivo para horarios.html */
-@media (max-width: 768px) {
-  .grade-horarios {
-    padding: 1rem;
-  }
 
   .grade-horarios h2 {
-    font-size: 2rem;
+    font-size: 1.5em;
   }
 
   .linha-horario {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 1rem;
+    padding: 10px;
   }
 
   .linha-horario img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   .linha-horario .nome {
-    font-size: 1.1rem;
+    font-size: 1.1em;
+    margin-bottom: 8px;
   }
 
   .linha-horario .local,
   .linha-horario .hora {
-    font-size: 0.95rem;
-    text-align: left;
-    width: 100%;
+    font-size: 0.85em;
+    margin: 3px 0;
+    text-align: center !important;
+    float: none !important;
   }
 }
 
-/* --- Responsive Design --- */
-
-/* Esconde o menu de navegação padrão em telas pequenas e mostra um botão de hambúrguer */
-@media (max-width: 768px) {
-    .navbar ul {
-        display: none; /* Esconde a lista de navegação padrão */
-        flex-direction: column; /* Organiza os itens verticalmente */
-        width: 100%; /* Ocupa toda a largura */
-        background-color: #333; /* Fundo escuro para o menu móvel */
-        position: absolute; /* Posiciona o menu abaixo do cabeçalho */
-        top: 60px; /* Ajuste para ficar abaixo do navbar */
-        left: 0;
-        z-index: 1000; /* Garante que o menu fique acima de outros elementos */
-    }
-
-    .navbar ul.active {
-        display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
-    }
-
-    .navbar ul li {
-        text-align: center; /* Centraliza os itens do menu */
-        margin: 10px 0; /* Espaçamento vertical entre os itens */
-    }
-
-    .navbar ul li a {
-        padding: 15px; /* Aumenta a área clicável */
-        display: block; /* Garante que o link ocupe todo o espaço do item */
-        color: #fff; /* Cor do texto no menu móvel */
-        border-bottom: 1px solid #555; /* Separador entre os itens */
-    }
-
-    .navbar ul li:last-child a {
-        border-bottom: none; /* Remove a borda do último item */
-    }
-
-    /* Estilo para o botão do menu hambúrguer */
-    .menu-toggle {
-        display: block; /* Mostra o botão de hambúrguer em telas pequenas */
-        background: none;
-        border: none;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    /* Ajustes para o logo e texto do cabeçalho em telas menores */
-    .navbar .logo-container {
-        flex-grow: 1; /* Permite que o logo ocupe o espaço restante */
-        justify-content: flex-start; /* Alinha o logo à esquerda */
-    }
-
-    .navbar .logo-img {
-        height: 40px; /* Reduz o tamanho do logo */
-    }
-
-    .navbar .logo-text {
-        font-size: 1.2em; /* Reduz o tamanho do texto do logo */
-        margin-left: 10px;
-    }
-
-    /* Ajustes para a grade de horários */
-    .grade-horarios {
-        padding: 10px; /* Reduz o padding geral */
-    }
-
-    .grade-horarios h2 {
-        font-size: 1.8em; /* Reduz o tamanho do título */
-        margin-bottom: 20px;
-    }
-
-    .linha-horario {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens empilhados */
-        text-align: center; /* Centraliza o texto dentro da linha-horario */
-        padding: 15px;
-        margin-bottom: 15px; /* Espaçamento entre as linhas */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar cada item */
-    }
-
-    .linha-horario img {
-        width: 80px; /* Reduz o tamanho da imagem */
-        height: 80px;
-        margin-bottom: 10px; /* Espaço abaixo da imagem */
-    }
-
-    .linha-horario .nome {
-        font-size: 1.2em; /* Nome da modalidade ligeiramente maior */
-        font-weight: bold;
-        margin-bottom: 10px; /* Adiciona espaço abaixo do nome */
-    }
-
-    /* REGRAS ATUALIZADAS PARA CENTRALIZAR LOCAL E HORA */
-    .linha-horario .local,
-    .linha-horario .hora {
-        display: block; /* Garante que cada um ocupe sua própria linha */
-        width: 100%; /* Ocupa toda a largura disponível */
-        text-align: center; /* Centraliza o texto */
-        margin: 5px 0; /* Espaçamento vertical entre local e hora */
-        font-size: 0.95em; /* Ajusta o tamanho da fonte */
-        /* Adiciona !important para garantir que sobrescreva outras regras */
-        text-align: center !important;
-        float: none !important; /* Anula qualquer float que possa estar empurrando para a direita */
-    }
+/* --- Ajustes globais --- */
+.navbar .logo-container {
+  flex-grow: 1;
+  justify-content: flex-start;
 }
 
-/* Ajustes para telas muito pequenas (smartphones) */
-@media (max-width: 480px) {
-    .navbar .logo-text {
-        font-size: 1em; /* Reduz ainda mais o texto do logo */
-    }
-
-    .grade-horarios h2 {
-        font-size: 1.5em; /* Título menor para telas muito pequenas */
-    }
-
-    .linha-horario {
-        padding: 10px; /* Reduz o padding da linha */
-    }
-
-    .linha-horario img {
-        width: 60px; /* Imagens menores */
-        height: 60px;
-    }
-
-    .linha-horario .nome {
-        font-size: 1.1em; /* Nome da modalidade um pouco menor */
-        margin-bottom: 8px; /* Espaço abaixo do nome */
-    }
-
-    .linha-horario .local,
-    .linha-horario .hora {
-        font-size: 0.85em; /* Fontes menores para local e hora */
-        margin: 3px 0; /* Espaçamento menor */
-        /* Adiciona !important para garantir que sobrescreva outras regras */
-        text-align: center !important;
-        float: none !important; /* Anula qualquer float */
-    }
+.navbar .logo-img {
+  height: 40px;
 }
 
-/* Menu hambúrguer */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--dourado);
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  z-index: 2001;
-}
-
-@media screen and (max-width: 768px) {
-  header.navbar {
-    position: relative;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  header.navbar ul {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2000;
-    padding-top: 5rem;
-  }
-
-  header.navbar ul.ativo {
-    display: flex;
-  }
+.navbar .logo-text {
+  font-size: 1.2em;
+  margin-left: 10px;
 }

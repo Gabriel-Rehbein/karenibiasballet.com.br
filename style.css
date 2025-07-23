@@ -1,6 +1,6 @@
 /* style.css */
 
-/* VARIÁVEIS DE CORES */
+/* ========== VARIÁVEIS DE CORES ========== */
 :root {
   --dourado: #d4af37;
   --preto: #000;
@@ -11,7 +11,7 @@
   --font-texto: 'Open Sans', sans-serif;
 }
 
-/* RESET */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
@@ -25,21 +25,15 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ========== NAVBAR (ESTÁTICA) ========== */
 .navbar {
   background-color: var(--preto);
   color: var(--dourado);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.0px;
+  padding: 1px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-  font-family: var(--font-titulo);
-  font-size: 2rem;
-  color: var(--dourado);
 }
 
 .navbar ul {
@@ -60,8 +54,32 @@ body {
   color: var(--dourado);
 }
 
+/* ========== LOGO ========== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
 
-/* HERO SECTION (Banner com texto centralizado) */
+.logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: contain; /* mostra a imagem inteira, sem cortar */
+  border: 2px solid var(--dourado);
+  padding: 4px;
+  background-color: var(--preto); /* ou branco, para contraste */
+}
+
+.logo-text {
+  font-family: var(--font-titulo);
+  font-size: 1.3rem;
+  color: var(--dourado);
+}
+
+/* ========== HERO SECTION ========== */
 .hero {
   position: relative;
   height: 90vh;
@@ -89,6 +107,7 @@ body {
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* ========== BOTÃO CHAMADA CTA ========== */
 .cta-button {
   background-color: var(--dourado);
   color: var(--preto);
@@ -106,7 +125,7 @@ body {
   transform: scale(1.08);
 }
 
-/* BANNER ROTATIVO */
+/* ========== BANNER ROTATIVO ========== */
 .banner-rotativo {
   position: relative;
   max-width: 100%;
@@ -133,7 +152,7 @@ body {
   pointer-events: auto;
 }
 
-/* DESTAQUES */
+/* ========== DESTAQUES ========== */
 .destaques {
   display: flex;
   justify-content: center;
@@ -167,34 +186,7 @@ body {
   transform: translateY(-10px);
 }
 
-/* LOGO */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-}
-
-.logo-img {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  object-fit: contain; /* mostra a imagem inteira, sem cortar */
-  border: 2px solid var(--dourado);
-  padding: 4px;
-  background-color: var(--preto); /* ou branco, para contraste */
-}
-
-
-.logo-text {
-  font-family: var(--font-titulo);
-  font-size: 1.3rem;
-  color: var(--dourado);
-}
-
-
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
   background-color: var(--preto);
   color: var(--branco);
@@ -203,4 +195,3 @@ footer {
   font-size: 0.9rem;
   margin-top: 4rem;
 }
-
